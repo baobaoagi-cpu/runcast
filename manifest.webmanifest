@@ -1,0 +1,21 @@
+{
+  "name": "RUNCAST · 馬拉松垂直媒體",
+  "short_name": "RUNCAST",
+  "description": "台灣最大路跑媒體平台 — 賽事、訓練、成績、跑者故事",
+  "start_url": "./RUNCAST.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0D0D0D",
+  "theme_color": "#C8310A",
+  "lang": "zh-Hant",
+  "categories": ["sports", "news", "lifestyle"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%230D0D0D'/><text x='50%25' y='58%25' font-family='Georgia,serif' font-size='220' font-weight='700' fill='%23C8310A' text-anchor='middle'>R</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
