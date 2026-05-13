@@ -518,7 +518,7 @@ function MStats() {
         fontFamily: 'DM Sans, sans-serif', fontSize: 9,
         letterSpacing: '0.22em', fontWeight: 700, color: BRAND.gold,
         marginBottom: 8,
-      }}>POWERED BY 伊貝特 × BRAVE LOG</div>
+      }}>POWERED BY BRAVE LOG</div>
       <h2 style={{
         fontFamily: '"Playfair Display", serif', fontSize: 22, fontWeight: 700,
         lineHeight: 1.25, margin: '0 0 24px', letterSpacing: '-0.01em',
@@ -671,7 +671,7 @@ function MFooter() {
         ))}
       </div>
       <div style={{ marginTop: 18, fontSize: 10, color: 'rgba(245,242,236,0.35)' }}>
-        © 2026 RUNCAST · 伊貝特 × Brave Log · v 2.6.1
+        © 2026 RUNCAST · POWERED BY BRAVE LOG · v 2.6.1
       </div>
     </footer>
   );

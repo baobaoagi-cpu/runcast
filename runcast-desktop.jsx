@@ -805,7 +805,7 @@ function StatsStrip() {
             fontFamily: 'DM Sans, system-ui, sans-serif',
             fontSize: 10, letterSpacing: '0.2em', fontWeight: 700,
             color: BRAND.gold,
-          }}>POWERED BY 伊貝特 × BRAVE LOG</div>
+          }}>POWERED BY BRAVE LOG</div>
         </div>
 
         <div style={{
@@ -965,7 +965,7 @@ function Footer() {
               fontFamily: 'DM Sans, system-ui, sans-serif',
               fontSize: 13, lineHeight: 1.6, maxWidth: 320,
               color: 'rgba(245,242,236,0.6)', margin: '0 0 20px',
-            }}>由台灣最大路跑平台伊貝特與 Brave Log 共同打造的馬拉松垂直媒體。</p>
+            }}>由台灣最大跑者成績資料庫 Brave Log 打造的馬拉松垂直媒體。</p>
             <div style={{ display: 'flex', gap: 10 }}>
               {['IG', 'FB', 'YT', 'X', 'TG'].map(s => (
                 <a key={s} href="#" style={{
@@ -1009,7 +1009,7 @@ function Footer() {
           fontFamily: 'DM Sans, sans-serif', fontSize: 11,
           color: 'rgba(245,242,236,0.4)', letterSpacing: '0.04em',
         }}>
-          <span>© 2026 RUNCAST Media. 伊貝特資訊股份有限公司 · Brave Log Inc.</span>
+          <span>© 2026 RUNCAST Media · Brave Log Inc.</span>
           <span>v 2.6.1 · PWA · 最後更新 2026.05.13 09:42</span>
         </div>
       </div>
