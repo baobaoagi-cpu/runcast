@@ -164,8 +164,59 @@ const PODCASTS = [
   { ep: 'EP.40', title: '受傷之後 — 三位跑者回到起跑線的故事',                 dur: '45:08', date: '4.26', host: '張瑀珊' },
 ];
 
-// ── Photo placeholder — striped SVG with monospace label ────────────────
-function Photo({ id, label, tone = 'ink', ratio = '16/10', radius = 0 }) {
+// ── Photo map — real images keyed by their label/slot key ─────────────
+const PHOTO_MAP = {
+  // hero (desktop + mobile) — REAL: 清水斷崖
+  '太魯閣峽谷晨霧 · 路線實拍': 'images/real-taroko.jpg',
+  '太魯閣峽谷 · 路線實拍':     'images/real-taroko.jpg',
+  // article slots — keyed by ARTICLES[].photo
+  'finish-line':              'images/real-standardchartered.jpg', // REAL: 渣打台北馬起跑
+  'rice-field':               'images/real-tianzhong.jpg',         // REAL: 田中馬路跑
+  'track-night':              'images/real-nightrun.webp',         // REAL: 夜跑
+  'heatmap':                  'images/heatmap.jpg',                // illustration (data viz)
+  'breakfast':                'images/breakfast.jpg',              // illustration
+  'shoes-pair':               'images/shoes-pair.jpg',             // illustration
+  // big feature banner — REAL: 渣打台北馬起跑
+  '渣打台北馬 · 起跑線':        'images/real-standardchartered.jpg',
+};
+
+// ── Photo — real image when available, otherwise stylized fallback ────
+function Photo({ id, label, tone = 'ink', ratio = '16/10', radius = 0, src }) {
+  const url = src || PHOTO_MAP[label];
+  if (url) {
+    return (
+      <div style={{
+        position: 'relative', width: '100%',
+        aspectRatio: ratio === 'auto' ? undefined : ratio,
+        height: ratio === 'auto' ? '100%' : undefined,
+        borderRadius: radius, overflow: 'hidden',
+        background: '#0d0d0d',
+      }}>
+        <img src={url} alt={label} style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%', objectFit: 'cover',
+          display: 'block',
+        }} />
+        <div style={{
+          position: 'absolute', left: 10, top: 10,
+          fontFamily: 'ui-monospace, "SF Mono", Menlo, monospace',
+          fontSize: 9, letterSpacing: '0.08em',
+          color: 'rgba(255,255,255,0.85)',
+          textTransform: 'uppercase',
+          padding: '2px 6px',
+          background: 'rgba(13,13,13,0.55)',
+          backdropFilter: 'blur(4px)',
+          WebkitBackdropFilter: 'blur(4px)',
+          border: '1px solid rgba(255,255,255,0.18)',
+          borderRadius: 2,
+        }}>
+          photo · {label}
+        </div>
+      </div>
+    );
+  }
+
+  // ── stylized fallback (unchanged) ──
   const palettes = {
     ink:   ['#1c1c1c', '#262626', '#0d0d0d'],
     red:   ['#8a2a14', '#a52a14', '#6e1f0f'],

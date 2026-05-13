@@ -14,3 +14,9 @@ Thumbs.db
 node_modules/
 dist/
 .cache/
+
+# Source materials kept local only (originals before AI image gen / processing)
+uploads/
+
+# Archives — never commit raw download bundles
+*.zip
