@@ -2,7 +2,7 @@
   "name": "RUNCAST · 馬拉松垂直媒體",
   "short_name": "RUNCAST",
   "description": "台灣最大路跑媒體平台 — 賽事、訓練、成績、跑者故事",
-  "start_url": "./RUNCAST.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
